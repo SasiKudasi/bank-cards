@@ -1,9 +1,9 @@
 package ru.bank_cards.dataaccess.entity;
 
 import lombok.Data;
+import ru.bank_cards.utilits.enums.PaymentStatus;
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 
 @Data
@@ -11,8 +11,7 @@ public class Payments {
     Long id;
     Card from;
     Card to;
-    LocalTime time;
-    LocalDate date;
-    String status;
+    LocalDateTime timestamp;
+    PaymentStatus status;
     BigDecimal amount;
 }
